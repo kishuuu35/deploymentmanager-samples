@@ -20,7 +20,7 @@ pipeline {
     //} 
     stage ('Creating GCP Compute With Boot Persistent Disk') {
            steps {
-           sh 'cd examples/v2/step_by_step_guide/step6_use_multiple_templates/python && gcloud deployment-manager deployments create deployment-with-many-templates \
+           sh 'cd examples/v2/step_by_step_guide/step6_use_multiple_templates/python && gcloud deployment-manager deployments create Provisioning \
   --config config-with-many-templates.yaml'
            }
     }
