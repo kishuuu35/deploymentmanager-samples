@@ -24,11 +24,3 @@ pipeline {
   --config config-with-many-templates.yaml'
            }
     }
-    
-    stage ('Destroying The GCP Resources') {
-      steps { 
-         sh 'gcloud deployment-manager deployments delete provisioning-gcp -q'
-      }
-    }
-}
-}
