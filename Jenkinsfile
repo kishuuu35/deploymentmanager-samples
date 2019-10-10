@@ -18,7 +18,7 @@ pipeline {
     //    input 'Approve The Plan To Proceed And Apply'
     //  }
     //} 
-    stage ('Create GCP Resources') {
+    stage ('Create GCP Resources: Compute, PD, Network, Firewall Rules') {
            steps {
            sh 'cd examples/v2/step_by_step_guide/step6_use_multiple_templates/python && gcloud deployment-manager deployments create provisioning-gcp \
   --config config-with-many-templates.yaml'
