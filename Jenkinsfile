@@ -24,7 +24,7 @@ pipeline {
   --config config-with-many-templates.yaml'
            }
     }
-    stage {
+    stage ('Approval to De-Provision') {
       options {
          timeout (time:1, unit: 'HOURS')
       }
