@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        sh 'echo Hello User, You are about to create GCP IaaS resources'
+        sh 'echo Hello Solution Arch, You are About To Create GCP IaaS Resources Using Deployment Manager Template'
       }
     }
     stage ('Approval to Provision') { 
@@ -18,5 +18,11 @@ pipeline {
         input 'Approve The Plan To Proceed And Apply'
       }
     } 
+    stage ('Creating GCP Compute With Boot Persistent Disk') {
+           steps {
+           sh 'cd examples/v2/step_by_step_guide/step6_use_multiple_templates/python && gcloud deployment-manager deployments create deployment-with-many-templates \
+  --config config-with-many-templates.yaml'
+           }
+    }
 }
 }
