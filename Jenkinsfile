@@ -18,7 +18,7 @@ pipeline {
     //    input 'Approve The Plan To Proceed And Apply'
     //  }
     //} 
-    stage ('Creating GCP Compute With Boot Persistent Disk') {
+    stage ('Create') {
            steps {
            sh 'cd examples/v2/step_by_step_guide/step6_use_multiple_templates/python && gcloud deployment-manager deployments create provisioning-gcp \
   --config config-with-many-templates.yaml'
@@ -29,7 +29,7 @@ pipeline {
          timeout (time:1, unit: 'HOURS')
       }
       steps {
-        input 'Approve De-Provisioning Plan to Proceed And Apply'
+        input 'Approve to Proceed And Apply'
       }
     }
     stage ('Destroying The GCP Resources with Deployment-Name') {
