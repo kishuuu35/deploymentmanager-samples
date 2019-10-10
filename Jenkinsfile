@@ -24,6 +24,14 @@ pipeline {
   --config config-with-many-templates.yaml'
            }
     }
+    stage {
+      options {
+         timeout (time:1, unit: 'HOURS')
+      }
+      steps {
+        input 'Approve De-Provisioning Plan to Proceed And Apply'
+      }
+    }
     stage ('Destroying The GCP Resources with Deployment-Name') {
       steps { 
          sh 'gcloud deployment-manager deployments delete provisioning-gcp'
