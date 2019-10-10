@@ -29,7 +29,7 @@ pipeline {
          timeout (time:1, unit: 'HOURS')
       }
       steps {
-        input 'Approve to Proceed And Apply'
+        input 'Approve Create to destory Proceed And Apply'
       }
     }
     stage ('Destroying The GCP Resources with Deployment-Name') {
