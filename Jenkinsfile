@@ -27,7 +27,7 @@ pipeline {
     
     stage ('Destroying The GCP Resources') {
       steps { 
-         sh 'gcloud deployment-manager deployments delete provisioning-gcp'
+         sh 'gcloud deployment-manager deployments delete provisioning-gcp -q'
       }
     }
 }
