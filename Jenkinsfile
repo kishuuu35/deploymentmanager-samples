@@ -24,3 +24,4 @@ pipeline {
   --config config-with-many-templates.yaml'
            }
     }
+  }
