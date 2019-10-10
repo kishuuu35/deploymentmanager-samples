@@ -7,7 +7,8 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        sh 'echo "Hi There !"'
+        sh 'echo Hi There!'
       }
     }
+}
 }
